@@ -5,8 +5,11 @@ on:
       drink:
         description: 'order drink'
         required: true
-      food:
+      food-1:
         description: 'order food'
+        required: false
+      food-2:
+        description: 'order more food'
         required: false
 
 jobs:
@@ -15,4 +18,5 @@ jobs:
     steps:
     - run: |
         echo "tnx ${{ github.event.inputs.drink }}!"
-        echo "- in ${{ github.event.inputs.food }}!"
+        echo "- in ${{ github.event.inputs.food-1 }}!"
+        echo "- in ${{ github.event.inputs.food-2 }}!"
